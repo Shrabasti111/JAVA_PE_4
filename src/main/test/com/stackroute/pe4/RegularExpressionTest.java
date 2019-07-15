@@ -19,19 +19,19 @@ public class RegularExpressionTest {
     }
 
     @Test
-    public void inputStringReturnsTrue() {  //checks whether the expected output matches the result
+    public void inputStringReturnTrue() {  //checks whether the expected output matches the result
         String result = regularExpression.isHarryHere("This is Harry");
         assertEquals("Is Harry here ? true", result);
     }
 
     @Test
-    public void inputAnotherStringReturnsTrue() {  //checks whether the expected output matches the result
+    public void inputAnotherStringReturnTrue() {  //checks whether the expected output matches the result
         String result = regularExpression.isHarryHere("This is Henry");
         assertEquals("Is Harry here ? false", result);
     }
 
     @Test(expected = NullPointerException.class) //checks for exceptions
-    public void inputNullRaisesExceptions() {
+    public void inputNullRaiseExceptions() {
         String result = regularExpression.isHarryHere(null);
     }
 

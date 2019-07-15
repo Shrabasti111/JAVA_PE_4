@@ -28,7 +28,7 @@ public class TransposeWordsTest {
     }
 
     @Test
-    public void givenEmptyString() //checks whether the expected result matches the actual result
+    public void givenEmptyStirng() //checks whether the expected result matches the actual result
     {
         String result=transposeWords.reverseString("");
         assertEquals(result,"Empty strings are not allowed!");

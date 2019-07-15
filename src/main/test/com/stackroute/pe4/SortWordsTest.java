@@ -34,6 +34,22 @@ public class SortWordsTest {
         assertArrayEquals(expected, result);
     }
 
+    @Test
+    public void inputString2ReturnSortedString(){ //checks whether the expected result matches the actual result
+        String inputString = "5 4 2 1 3";
+        String[] expected = {"1","2","3","4","5"};
+        String[] result = sortWords.sortWordsInString(inputString);
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void inputString3ReturnSortedString(){ //checks whether the expected result matches the actual result
+        String inputString = "$ # @ & *";
+        String[] expected = {"#","$","&","*","@"};
+        String[] result = sortWords.sortWordsInString(inputString);
+        assertArrayEquals(expected, result);
+    }
+
     @Test(expected = NullPointerException.class) //checks for exception
     public void givenNullRaiseExceptions() {
         String[] result = sortWords.sortWordsInString(null);

@@ -19,14 +19,29 @@ public class MultipleOccurenceTest {
       }
 
       @Test
-      public void inputStringShouldReturnPositions() { //checks whether the expected output matches the result
+      public void inputStringReturnIndexString() { //checks whether the expected output matches the result
           String result[] = multipleOccurence.stringOccurence("She sells seashells by the seashore","se");
           String expected[] = {"4 - 6","10 - 12","27 - 29"};
           assertArrayEquals(expected,result);
       }
 
+      @Test
+      public void inputString2ReturnIndexString() { //checks whether the expected output matches the result
+          String result[] = multipleOccurence.stringOccurence("She sells@&8 sea@&8shells by the seashore","@&8");
+          String expected[] = {"9 - 12","16 - 19"};
+          assertArrayEquals(expected,result);
+      }
+
+        @Test
+        public void inputString3ReturnIndexString() { //checks whether the expected output matches the result
+            String result[] = multipleOccurence.stringOccurence("She sells se1234s by the se1234hore","1234");
+            String expected[] = {"12 - 16","27 - 31"};
+            assertArrayEquals(expected,result);
+        }
+
+
       @Test(expected = NullPointerException.class) //checks for exception
-      public void inputNullShouldReturnNullOutputException() {
+      public void inputNullReturnException() {
           String result[] = multipleOccurence.stringOccurence(null,null);
       }
 
@@ -36,7 +51,7 @@ public class MultipleOccurenceTest {
       }
 
       @Test
-      public void inputStringShouldReturnPositionIndex(){ //checks whether the expected output matches the result
+      public void inputStringReturnIndex(){ //checks whether the expected output matches the result
           String result[] = multipleOccurence.stringOccurence("hello world"," ");
           String expected[] = {"5 - 6"};
           assertArrayEquals(expected,result);
